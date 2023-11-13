@@ -1,0 +1,36 @@
+{% extends 'users/base.html' %}
+{% load static %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'users/index.css' %}">
+{%endblock%}
+{% block body %}
+    <h1>DjangoSocialApp</h1>
+    {% for post in posts %}
+        <div class="card">
+            <div class="container">
+                <h1 class="title">{{ post.title }}</h1>
+                <h2 class="username">{{ post.user }}</h2>
+                <img class="postresim" src="{{ post.image.url }}" alt="">
+                <p class="caption">{{ post.caption }}</p>
+            </div>
+        </div>
+        <br>
+    {% endfor %}
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <script>
+        let mybutton = document.getElementById("myBtn");
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+            }
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+{% endblock %}

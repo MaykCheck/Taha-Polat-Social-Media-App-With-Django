@@ -1,0 +1,25 @@
+{% extends 'users/base.html' %}
+{% load static %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'users/create.css' %}">
+{%endblock%}
+
+{% block body %}
+    <div class="card">
+        <div class="container">
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {% for field in form %}
+                    <div class="form-label">
+                        {{ field.label_tag }}
+                    </div>
+                    <div>
+                        {{ field }}
+                    </div>
+                {% endfor %}
+                <button class="button" type="submit">Post</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

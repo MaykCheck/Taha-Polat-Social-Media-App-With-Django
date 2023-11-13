@@ -1,0 +1,21 @@
+.photo-ist {
+    width: 100%;
+    border-radius: 15px;
+    left: 160px;
+}
+
+.header {
+    text-align: center;
+    color: whitesmoke;
+    font-size: large;
+}
+
+.card {
+    width: 80%;
+    float: right;
+}
+
+p{
+    color: whitesmoke;
+    font-size: larger;
+}

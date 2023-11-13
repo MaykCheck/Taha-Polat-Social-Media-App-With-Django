@@ -1,0 +1,56 @@
+body {
+    background-color: #404258;
+}
+.topnav {
+    overflow: hidden;
+    background-color: #474E68;
+    border-radius: 5px;
+}
+
+.topnav:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.topnav a {
+    float: left;
+    color: whitesmoke;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: #4d194d;
+    transition: 500ms;
+}
+
+.sidenav {
+    height: 450px;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 100;
+    left: 0;
+    background-color: #474E68;
+    overflow-x: hidden;
+    padding-top: 20px;
+    border-radius: 0px 15px 15px 0px;
+}
+  
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: whitesmoke;
+    display: block;
+}
+  
+.sidenav:hover {
+    color: #f1f1f1;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
